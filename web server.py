@@ -20,7 +20,7 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
         # Send message back to client
-        message = "This web page starts a restful interface"
+        message = "This web page runs on a pi and does a thing"
         # Write content as utf-8 data
         self.wfile.write(bytes(message, "utf8"))
         return
@@ -30,7 +30,7 @@ def run():
     print('starting server...')
 
     # Server setting
-    server_address = ('leopard', 5000)
+    server_address = ('172.16.0.26', 5000)
     httpd = HTTPServer(server_address, testHTTPServer_RequestHandler)
     print('running server...')
     httpd.serve_forever()
