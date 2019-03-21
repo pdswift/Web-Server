@@ -30,7 +30,7 @@ def run():
     print('starting server...')
 
     # Server setting
-    server_address = ('172.16.0.26', 5000)
+    server_address = ('172.25.107.95', 5000)
     httpd = HTTPServer(server_address, testHTTPServer_RequestHandler)
     print('running server...')
     httpd.serve_forever()
